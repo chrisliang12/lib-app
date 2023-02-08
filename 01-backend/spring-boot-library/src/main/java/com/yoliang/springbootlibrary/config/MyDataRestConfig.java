@@ -1,6 +1,7 @@
 package com.yoliang.springbootlibrary.config;
 
 import com.yoliang.springbootlibrary.entity.Book;
+import com.yoliang.springbootlibrary.entity.Review;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -16,8 +17,10 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         HttpMethod[] theUnsupportedActions = {HttpMethod.POST, HttpMethod.PATCH, HttpMethod.PUT, HttpMethod.DELETE};
 
         config.exposeIdsFor(Book.class);
+        config.exposeIdsFor(Review.class);
 
         disablehttpMethods(Book.class, config, theUnsupportedActions);
+        disablehttpMethods(Review.class, config, theUnsupportedActions);
 
         cors.addMapping(config.getBasePath() + "/**")
         .allowedOrigins(theAllowedOrigins);
