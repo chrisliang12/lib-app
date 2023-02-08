@@ -26,7 +26,7 @@ export const CheckoutAndReviewBox: React.FC<{ book: BookModel | undefined, mobil
               </p>
             </div>
           </div>
-          <Link to='/#' className="btn btn-success btn-lg"></Link>
+          <Link to='/#' className="btn btn-success btn-lg">Sing in</Link>
           <hr />
           <p className="mt-3">
             This number can change until placing order has been complete.
