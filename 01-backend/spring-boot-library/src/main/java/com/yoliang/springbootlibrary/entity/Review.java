@@ -1,9 +1,9 @@
 package com.yoliang.springbootlibrary.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
