@@ -10,4 +10,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
 
     Page<Review> findBybookId(@RequestParam("book_id") Long bookId,
                               Pageable pageable);
+
+    Review findByUserEmailAndBookId(String userEmail, Long bookId);
 }
